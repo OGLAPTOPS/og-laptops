@@ -125,8 +125,11 @@ body {
 .hero {
     min-height: 100vh;
     background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%),
-                url('https://d2xsxph8kpxj0f.cloudfront.net/310519663767864590/oW6LBGYH53Wswrzmw9x2k8/hero-bg-premium-D3pvYHWYPzvkJ7TL6NfSGL.webp') center/cover;
+                url('images/hero-mobile.jpg') center/cover;
     background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -636,6 +639,12 @@ body {
         display: flex;
     }
 
+    .hero {
+        background-attachment: scroll;
+        min-height: 80vh;
+        padding: 60px 20px;
+    }
+
     .hero-title {
         font-size: 36px;
     }
@@ -668,14 +677,34 @@ body {
 
 @media (max-width: 480px) {
     .hero {
-        padding: 60px 20px;
+        padding: 40px 20px;
+        min-height: 70vh;
+        background-attachment: scroll;
     }
 
     .hero-title {
         font-size: 28px;
+        margin-bottom: 16px;
     }
 
     .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    .hero-badges {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 24px;
+    }
+
+    .badge {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
         font-size: 14px;
     }
 
